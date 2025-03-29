@@ -11,16 +11,63 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
         }
-        .header { background-color: #1f1f1f; color: #ffffff; text-align: left; padding: 1em 0; margin: 10px; }
-        .content { padding: 20px; background-color: #0d0d0d; color: #ffffff; }
-        .section { margin-bottom: 20px; }
-        .features { background-color: #262626; padding: 10px; border-radius: 5px; }
-        .feature-item { margin-bottom: 10px; color: #cccccc; }
-        .price { font-size: 24px; color: #4caf50; }
-        .contact { background-color: #333333; padding: 15px; border-radius: 5px; text-align: center; }
-        .contact-email a { font-size: 20px; color: #4caf50; text-decoration: none; }
-        .contact-email a:hover { color: #66ff66; text-decoration: underline; }
-        .logo { float: left; width: 100%; margin: 15px; }
+        .header {
+            background-color: #1f1f1f;
+            color: #ffffff;
+            text-align: left;
+            padding: 1em 0;
+            margin: 10px;
+        }
+        .content {
+            padding: 20px;
+            background-color: #0d0d0d;
+            color: #ffffff;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .features {
+            background-color: #262626;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .features-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .feature-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        .feature-item {
+            margin-bottom: 10px;
+            color: #cccccc;
+        }
+        .price {
+            font-size: 24px;
+            color: #4caf50;
+        }
+        .contact {
+            background-color: #333333;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .contact-email a {
+            font-size: 20px;
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .contact-email a:hover {
+            color: #66ff66;
+            text-decoration: underline;
+        }
+        .logo {
+            float: left;
+            width: 100%;
+            margin: 15px;
+        }
         .partners {
             text-align: center;
             padding: 20px 0;
@@ -51,22 +98,28 @@
     <div class="content">
         <div class="section">
             <h2>Welcome to SWGRealms</h2>
-			<p>SWGRealms offers an easy and affordable way to launch your own Star Wars Galaxies Emulator server based on the open source <a href="https://git.swgemu.com/swgemu/Core3">SWGEmu Code</a></p>
+            <p>SWGRealms offers an easy and affordable way to launch your own Star Wars Galaxies Emulator server based on the open source <a href="https://git.swgemu.com/swgemu/Core3">SWGEmu Code</a></p>
             <p>Enjoy full control over settings and configuration with our user-friendly management interface.</p>
         </div>
 
         <div class="section features">
             <h3>Features</h3>
-            <div class="feature-item">Easy-to-use Control Panel</div>
-            <div class="feature-item">Single Sign-on Across All Servers</div>
-            <div class="feature-item">Your Choice: Invite Only or Open to All Community Members</div>
-            <div class="feature-item">VPN and Bot Detection</div>
-            <div class="feature-item">Transaction Review Tooling</div>
-            <div class="feature-item">Account Wide Bans, IP Bans</div>
-            <div class="feature-item">Customizable Settings, Including Lua Script</div>
-            <div class="feature-item">Server Monitoring and Alerting</div>
-            <div class="feature-item">Automated Snapshot Backups</div>
-            <div class="feature-item">Advanced Plans Include Git Repo Automation</div>
+            <div class="features-columns">
+                <div class="feature-column">
+                    <div class="feature-item">Easy-to-use Control Panel</div>
+                    <div class="feature-item">Single Sign-on Across All Servers</div>
+                    <div class="feature-item">Your Choice: Invite Only or Open to All Community Members</div>
+                    <div class="feature-item">VPN and Bot Detection</div>
+                    <div class="feature-item">Transaction Review Tooling</div>
+                </div>
+                <div class="feature-column">
+                    <div class="feature-item">Account Wide Bans, IP Bans</div>
+                    <div class="feature-item">Customizable Settings, Including Lua Script</div>
+                    <div class="feature-item">Server Monitoring and Alerting</div>
+                    <div class="feature-item">Automated Snapshot Backups</div>
+                    <div class="feature-item">Advanced Plans Include Git Repo Automation</div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
