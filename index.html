@@ -26,9 +26,19 @@
         .section {
             margin-bottom: 20px;
         }
+        .section-header {
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d4af37;
+        }
         .features {
             background-color: #262626;
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
         }
         .features-columns {
@@ -43,6 +53,8 @@
         .feature-item {
             margin-bottom: 10px;
             color: #cccccc;
+            list-style-type: disc;
+            margin-left: 20px;
         }
         .price {
             font-size: 24px;
@@ -74,9 +86,6 @@
             background-color: #1f1f1f;
             border-radius: 5px;
         }
-        .partners h3 {
-            margin-bottom: 15px;
-        }
         .partner {
             display: inline-block;
             margin: 0 20px;
@@ -103,27 +112,27 @@
         </div>
 
         <div class="section features">
-            <h3>Features</h3>
+            <div class="section-header">Features</div>
             <div class="features-columns">
-                <div class="feature-column">
-                    <div class="feature-item">Easy-to-use Control Panel</div>
-                    <div class="feature-item">Single Sign-on Across All Servers</div>
-                    <div class="feature-item">Your Choice: Invite Only or Open to All Community Members</div>
-                    <div class="feature-item">VPN and Bot Detection</div>
-                    <div class="feature-item">Transaction Review Tooling</div>
-                </div>
-                <div class="feature-column">
-                    <div class="feature-item">Account Wide Bans, IP Bans</div>
-                    <div class="feature-item">Customizable Settings, Including Lua Script</div>
-                    <div class="feature-item">Server Monitoring and Alerting</div>
-                    <div class="feature-item">Automated Snapshot Backups</div>
-                    <div class="feature-item">Advanced Plans Include Git Repo Automation</div>
-                </div>
+                <ul class="feature-column">
+                    <li class="feature-item">Easy-to-use Control Panel</li>
+                    <li class="feature-item">Single Sign-on Across All Servers</li>
+                    <li class="feature-item">Your Choice: Invite Only or Open to All Community Members</li>
+                    <li class="feature-item">VPN and Bot Detection</li>
+                    <li class="feature-item">Transaction Review Tooling</li>
+                </ul>
+                <ul class="feature-column">
+                    <li class="feature-item">Account Wide Bans, IP Bans</li>
+                    <li class="feature-item">Customizable Settings, Including Lua Script</li>
+                    <li class="feature-item">Server Monitoring and Alerting</li>
+                    <li class="feature-item">Automated Snapshot Backups</li>
+                    <li class="feature-item">Advanced Plans Include Git Repo Automation</li>
+                </ul>
             </div>
         </div>
 
         <div class="section">
-            <h3>Pricing</h3>
+            <div class="section-header">Pricing</div>
             <p class="price">TBD</p>
             <p>Our plan is to include hosting, management tools, server monitoring, and alerting.</p>
             <p>We are considering pricing based on the number of players, or the size of the server, still looking for feedback.</p>
@@ -131,7 +140,7 @@
         </div>
 
         <div class="section partners">
-            <h3>Launch Partners</h3>
+            <div class="section-header">Launch Partners</div>
             <div class="partner">
                 <a href="https://www.swgnfs.com/" target="_blank">
                     <img src="images/swgnfs_logo.png" alt="SWG NFS Logo">
