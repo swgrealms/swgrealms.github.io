@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+a:visited {
+    color: LinkText;
+}
+.header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+}
+.logo {
+    display: block;
+    max-width: 75%;
+    height: auto;
+    margin: 0 auto 15px auto;
+}
+.content {
+    padding: 2px 20px 20px 20px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+.section {
+    margin-bottom: 15px;
+}
+.section-header {
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d4af37;
+}
+.features {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 5px;
+}
+.features-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.feature-column {
+    flex: 1;
+    min-width: 250px;
+}
+.feature-item {
+    margin-bottom: 10px;
+    color: #cccccc;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.price {
+    font-size: 24px;
+    color: #4caf50;
+}
+.contact {
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.contact-email a {
+    font-size: 20px;
+    color: #4caf50;
+    text-decoration: none;
+}
+.contact-email a:hover {
+    color: #66ff66;
+    text-decoration: underline;
+}
+.partners {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+}
+.partner {
+    display: inline-block;
+    margin: 0 20px;
+}
+.partner img {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+.partner img:hover {
+    transform: scale(1.1);
+}
