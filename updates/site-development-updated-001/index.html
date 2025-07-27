@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Primary Meta Tags -->
+    <title>SWGRealms - Managed Star Wars Galaxies Hosting</title>
+	<meta name="title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta name="description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+
+	<!-- RSS Feed -->
+	<link rel="alternate" type="application/rss+xml" title="SWGRealms - Managed Star Wars Galaxies Hosting" href="https://www.swgrealms.com/atom.xml">
+	<link rel="alternate" type="application/atom+xml" title="SWGRealms - Managed Star Wars Galaxies Hosting" href="https://www.swgrealms.com/atom.xml">
+
+	<!-- Open Graph / Facebook / Discord -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https:&amp;#x2F;&amp;#x2F;www.swgrealms.com">
+	<meta property="og:title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta property="og:description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+	<meta property="og:image" content="https://www.swgrealms.com/images/og-image.jpg">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https:&amp;#x2F;&amp;#x2F;www.swgrealms.com">
+	<meta name="twitter:title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta name="twitter:description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+	<meta name="twitter:image" content="https://www.swgrealms.com/images/og-image.jpg">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/images/swgrealms_logo.png" class="logo" alt="SWGRealms Logo">
+    </div>
+
+    <nav class="navigation">
+        
+            
+                <a href="&#x2F;" class="nav-item">Home</a>
+            
+                <a href="&#x2F;about&#x2F;" class="nav-item">About</a>
+            
+                <a href="&#x2F;updates&#x2F;" class="nav-item">Updates</a>
+            
+        
+    </nav>
+
+    <div class="content">
+        
+<div class="section">
+    <article class="post">
+        <header class="post-header">
+            <h1>Development Update 001 - July 2025</h1>
+            <div class="post-meta">
+                <time datetime="2025-07-27">July 27, 2025</time>
+            </div>
+        </header>
+        
+        <div class="post-content">
+            <p>Since the project is currently a one person show, I've been focused on setting up as much automation as possible while building the foundation for what SWGRealms will become. This update covers the progression from initial concept through early implementation.</p>
+<span id="continue-reading"></span><h2 id="project-vision-and-requirements-prfaq">Project Vision and Requirements (PRFAQ)</h2>
+<p>The first major milestone was completing a comprehensive Press Release and Frequently Asked Questions document - a PRFAQ. This 14 page document works backward from the customer experience to define what SWGRealms needs to deliver for both galaxy owners and players. I shared this with SWGEmu staff, early launch partners, and interested galaxy owners for feedback, and it's become the north star for the entire project.</p>
+<p>The Amazon PRFAQ concept focuses on working backward from the customer, but ours extends beyond that with 4+ pages of architectural and technical design considerations to help drive the implementation forward. We're even using it with LLMs to set context for the project as we design each system and user experience - it's proven invaluable for maintaining consistency across all the many subsystems required for SWGRealms.</p>
+<h2 id="technical-stack-and-infrastructure-research">Technical Stack and Infrastructure Research</h2>
+<p>With the vision documented, I moved into prototyping the core infrastructure APIs in Rust. While my background is obviously very "Cloud" biased, I am looking to develop SWGRealms so it can run in any cloud, or even on bare metal. With that in mind I've been doing some research and prototyping of our automation systems, and while SWGEmu is based on Docker, I was not comfortable with its isolation or automation for the types of things SWGRealms needs to support.</p>
+<p>I've setup a full prototype environment on a very large machine I have and have been testing container and vm management using <a rel="noopener nofollow noreferrer" target="_blank" href="https://linuxcontainers.org/incus/">Incus</a> which provides strong isolation and APIs including the ability to cluster across multiple servers. In 2017 I moved <a rel="noopener nofollow noreferrer" target="_blank" href="https://www.swgemu.com/forums/showthread.php?t=204144">SWGEmu to Kubernetes</a> but it was a bit too complex for SWGEmu's needs. In 2022 when I moved us (yet again) I re-designed SWGEmu's infrastructure based on docker compose which was fine for a small environment with only 36 mostly static services, but lacked the robust orchestration I was looking for to power SWGRealms. It's been hard to find something with the right balance. So far my testing with Incus has shown it can handle all the use cases SWGRealms needs and will be straightforward to automate with our core orchestrator while supporting the level of dynamic services I expect with SWGRealms.</p>
+<h2 id="website-and-community-communication">Website and Community Communication</h2>
+<p>I was looking for a way to keep the community up to date on the project's progress. I'm not a big fan of complicated forums, pretty sure those have gone the way of the dodo. My plan is to have a tight discord integration later for the community to connect and discuss SWGRealms. I didn't want to spend too much time right now with the Discord integration nor did I want to launch some random forum software to just later dismantle it.</p>
+<p>With my focus on automation and Rust I decided to use <a rel="noopener nofollow noreferrer" target="_blank" href="https://www.getzola.org/">Zola</a> to setup a static site generator, in parallel I'm also doing a lot of work looking at how LLMs can help with development processes, so I installed <a rel="noopener nofollow noreferrer" target="_blank" href="https://aws.amazon.com/q/">Amazon Q</a> into my dev box and collaborated with it to get the Zola setup in a way I can enjoy using, and easily push the site out w/o messing around with a bunch of html and css. I will say it's taking a lot longer with an LLM, but I'm learning how to move faster once I laid down the roots for it to be a useful tool. I have a lot of history with AI/ML and this has been yet another interesting generation of AI tooling after the last AI winter from the mid-1990's. Like any tool, mastering the tool will take time, and LLMs are no different, you can get mediocre results out with just a bit of effort, but extra effort seems to yield a much higher quality set of results.</p>
+<h2 id="what-s-next">What's next</h2>
+<h3 id="user-registration-and-character-name-reservation">User registration and character name reservation</h3>
+<p>My next big goal is user registration, since SWGRealms will have one single user registration system for all galaxies and their tooling, I want a robust system which is secure, easy to use, and scales reliably. I will allow users to register with their "existing" usernames from the <a rel="noopener nofollow noreferrer" target="_blank" href="https://www.swgemu.com/">SWGEmu</a> project, and potentially even reserve a couple of their favorite (and existing) character names from SWGEmu's finalizer.</p>
+<p>With this in mind I expect there will be the typical rush to grab usernames and character names, so I want the system to handle that with ease and over time I will allow people to take abandoned names too which will spawn another mad rush.</p>
+<h3 id="back-end-api-development">Back-end API development</h3>
+<p>Our launch partners are anxiously awaiting the API integration code for the galaxy to SWGRealms' central account and configuration management so we can start launching test instances of their galaxies on the platform.</p>
+<p>I need to balance keeping "player facing" updates moving against actually making "galaxy owner" facing updates which tend to be a bit more invisible to the community. That said I have some initial prototypes developed on my local dev box for the API and will start fleshing those out and testing so we can get moving on launching the first test galaxies.</p>
+<h3 id="rough-timeline">Rough Timeline</h3>
+<p>As many in the SWGEmu community are aware, timelines are rough with a volunteer project, and all I can say is Soon(tm) for user registration and Soon(tm)+Later(tm) for the galaxy owner APIs and integration with Core3 so we can start testing galaxy instances. The beauty of building this incrementally is that each piece builds on the previous work and things will get faster as more of the foundation is laid.</p>
+<p>My hope is to make regular updates to the site so keep your eye on <a href="/updates/">Updates</a> for future news and our <a href="/atom.xml">RSS Feed</a> for automated notices of posts.</p>
+<h3 id="development-philosophy">Development Philosophy</h3>
+<p>One thing I've learned from decades in this space is that getting the foundation right takes time, but pays dividends later. Every decision I'm making now - from the Rust APIs to the Incus infrastructure - is focused on creating something that can scale from a handful of beta galaxies to hundreds of communities without requiring a complete rewrite.</p>
+<p>Hopefully you found this update interesting, please stand by, and remember this is a 100% volunteer project, so it's limited by the personal time available to be spent on the project.</p>
+<hr />
+<p><em>Interested in beta access? <a href="mailto:interested@swgrealms.com">Contact us</a> to learn more about participating in the SWGRealms beta program.</em></p>
+
+        </div>
+        
+        <footer class="post-footer">
+            <a href="/updates/" class="back-link">&larr; Back to Updates</a>
+        </footer>
+    </article>
+</div>
+
+    </div>
+
+<!-- build date: 2025-07-27 20:23:42 -->
+</body>
+</html>
