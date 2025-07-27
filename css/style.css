@@ -9,6 +9,18 @@ html, body {
 a:visited {
     color: LinkText;
 }
+
+/* General link styling */
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #66ff66;
+    text-decoration: underline;
+}
+
 .header {
     background-color: #1f1f1f;
     color: #ffffff;
@@ -22,6 +34,31 @@ a:visited {
     max-width: 75%;
     height: auto;
     margin: 0 auto 15px auto;
+}
+.navigation {
+    background-color: #2a2a2a;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.nav-item {
+    display: inline-block;
+    color: #d4af37;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.nav-item:hover {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+.nav-item:visited {
+    color: #d4af37;
 }
 .content {
     padding: 2px 20px 20px 20px;
@@ -97,3 +134,137 @@ a:visited {
 .partner img:hover {
     transform: scale(1.1);
 }
+
+/* Post and section styling */
+.posts-list {
+    margin-top: 30px;
+}
+.post-preview {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #d4af37;
+}
+.post-preview h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.post-preview h3 a {
+    color: #d4af37;
+    text-decoration: none;
+}
+.post-preview h3 a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.post-meta {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.post-description {
+    color: #cccccc;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.read-more {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+.read-more:hover {
+    color: #66ff66;
+    text-decoration: underline;
+}
+
+/* Individual post styling */
+.post {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 5px;
+    border-left: 4px solid #d4af37;
+}
+.post-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 20px;
+}
+.post-header h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #d4af37;
+}
+.post-content {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.post-content h1, .post-content h2, .post-content h3 {
+    color: #d4af37;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.post-content h1 {
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 10px;
+}
+.post-content h2 {
+    border-bottom: 1px solid #333333;
+    padding-bottom: 5px;
+}
+.post-content p {
+    margin-bottom: 15px;
+}
+.post-content ul, .post-content ol {
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+.post-content li {
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+.post-content a {
+    color: #4caf50;
+    text-decoration: none;
+}
+.post-content a:hover {
+    color: #66ff66;
+    text-decoration: underline;
+}
+.post-footer {
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+}
+.back-link {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back-link:hover {
+    color: #66ff66;
+    text-decoration: underline;
+}
+/* Test shortcode styles */
+.test-shortcode {
+    background-color: #333;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.test-shortcode h3 {
+    color: #ffd700;
+    margin-top: 0;
+    text-align: center;
+}
+
+.test-body {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border-left: 4px solid #ffd700;
+}
+/* Footer */
+.site-footer {
