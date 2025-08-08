@@ -412,12 +412,16 @@ a:visited {
 
 /* General link styling */
 a {
-    color: #4caf50;
+    color: #4caf50 !important;
     text-decoration: none;
 }
 
+a:visited {
+    color: #4caf50 !important;
+}
+
 a:hover {
-    color: #66ff66;
+    color: #66ff66 !important;
     text-decoration: underline;
 }
 
