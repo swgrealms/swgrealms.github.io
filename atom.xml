@@ -37,16 +37,16 @@
 &lt;li&gt;&lt;strong&gt;Future-Ready&lt;&#x2F;strong&gt;: Native support for multi-factor authentication, social logins, and advanced security features&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;preserving-your-swgemu-legacy&quot;&gt;Preserving Your SWGEmu Legacy&lt;&#x2F;h2&gt;
-&lt;p&gt;While security is paramount, we haven&#x27;t forgotten about community. Our authentication system seamlessly integrates with SWGEmu&#x27;s existing user database to preserve your community history:&lt;&#x2F;p&gt;
+&lt;p&gt;While security is paramount, we haven&#x27;t forgotten about community. Our authentication system seamlessly integrates with SWGEmu&#x27;s systems to preserve your community history:&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Veteran Status&lt;&#x2F;strong&gt;: Your original join date from 2011+ is preserved&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Veteran Status&lt;&#x2F;strong&gt;: Your original join date from 2006+ is preserved&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Forum Activity&lt;&#x2F;strong&gt;: Post counts and activity timestamps are maintained&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Community Identity&lt;&#x2F;strong&gt;: Your legacy username and verification status carry forward&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Seamless Migration&lt;&#x2F;strong&gt;: Existing SWGEmu users can sign in with their current credentials&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;p&gt;This solves the &quot;one way door&quot; problem – you can join SWGRealms without losing years of community history and contributions.&lt;&#x2F;p&gt;
+&lt;p&gt;This lets you bring your SWGEmu legacy into SWGRealms without losing years of community history and contributions.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;built-for-scale&quot;&gt;Built for Scale&lt;&#x2F;h2&gt;
-&lt;p&gt;SWGRealms is designed to support hundreds of galaxies and thousands of concurrent players. Our authentication infrastructure scales automatically, ensuring consistent performance whether we&#x27;re serving a handful of beta users or a thriving universe of communities.&lt;&#x2F;p&gt;
+&lt;p&gt;SWGRealms is designed to support thousands of galaxies and tens of thousands of concurrent players if the community so desires. Our authentication infrastructure scales automatically, ensuring consistent performance whether we&#x27;re serving a handful of beta users or a thriving universe of communities.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;By the Numbers:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;1,200+ lines of code&lt;&#x2F;strong&gt; across authentication components&lt;&#x2F;li&gt;
@@ -85,7 +85,7 @@
 &lt;p&gt;The complete authentication system is now live at &lt;a rel=&quot;noopener nofollow noreferrer&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;swgrealms.com&quot;&gt;swgrealms.com&lt;&#x2F;a&gt;. SWGEmu community members can sign in with their existing credentials and explore the platform while preserving their community history.&lt;&#x2F;p&gt;
 &lt;p&gt;We&#x27;re excited to see what the community thinks of this foundation as we continue building toward our full platform launch.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;p&gt;&lt;em&gt;Have questions about our security approach or want to learn more about the technical implementation? Join the discussion on our community forums or reach out to the development team.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Have questions about our security approach or want to learn more about the technical implementation? Contact us at &lt;a href=&quot;mailto:interested@swgrealms.com&quot;&gt;interested@swgrealms.com&lt;&#x2F;a&gt;.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 </content>
         
     </entry>
