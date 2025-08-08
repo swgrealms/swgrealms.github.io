@@ -70,55 +70,173 @@
 
     <div class="content">
         
-<div class="section">
-    <article class="post">
-        <header class="post-header">
-            <h1>Beta Development Update - January 2025</h1>
-            <div class="post-meta">
-                <time datetime="2025-01-26">January 26, 2025</time>
+<div class="auth-page">
+    <!-- Main content -->
+    <div class="auth-content">
+        <div class="auth-card">
+            <h1>Welcome Back</h1>
+            <p>Ready to sign in to your SWGRealms account?</p>
+            
+            <div class="auth-explanation">
+                <h3>What happens next:</h3>
+                <ul>
+                    <li>Click "Sign In" to go to our secure login page</li>
+                    <li>Enter your username and password</li>
+                    <li>You'll be redirected back here once signed in</li>
+                </ul>
+                
+                <div class="auth-note">
+                    <strong>For SWGEmu Users:</strong> Use your existing SWGEmu username and password. You'll be asked to validate your email and create a new password for security.
+                </div>
+                
+                <div class="auth-note">
+                    <strong>New Users:</strong> Welcome! You can create a new account. Note: You may get an error if you choose an existing SWGEmu username.
+                </div>
             </div>
-        </header>
-        
-        <div class="post-content">
-            <p>We're excited to share that SWGRealms has officially entered the private beta development phase! Our team is working diligently to build the managed hosting platform that will eliminate technical barriers for Star Wars Galaxies communities, with our launch partners helping validate the platform design.</p>
-<span id="continue-reading"></span><h2 id="current-development-focus">Current Development Focus</h2>
-<p>Our development efforts are currently concentrated on three key areas:</p>
-<h3 id="core-platform-infrastructure">Core Platform Infrastructure</h3>
-<ul>
-<li>Unified authentication system across all galaxies</li>
-<li>Automated backup and snapshot management</li>
-<li>Advanced bot detection and security monitoring</li>
-<li>Galaxy provisioning and management APIs</li>
-</ul>
-<h3 id="community-management-tools">Community Management Tools</h3>
-<ul>
-<li>Intuitive control panel for galaxy operators</li>
-<li>Player management and moderation capabilities</li>
-<li>Configuration management for gameplay settings</li>
-<li>Integration with Discord and external platforms</li>
-</ul>
-<h3 id="developer-experience">Developer Experience</h3>
-<ul>
-<li>Managed git repositories for advanced users</li>
-<li>Automated build and deployment pipelines</li>
-<li>Safe testing environments for custom modifications</li>
-<li>Comprehensive documentation and guides</li>
-</ul>
-<h2 id="partnership-program">Partnership Program</h2>
-<p>We're proud to be working with our launch partners <a rel="noopener nofollow noreferrer" target="_blank" href="https://www.swgnfs.com/">SWG NFS</a> and <a rel="noopener nofollow noreferrer" target="_blank" href="https://cuemu.com/">CUEmu</a> to validate our platform design and ensure we're building the right solutions for real community needs.</p>
-<h2 id="looking-ahead">Looking Ahead</h2>
-<p>As we continue development, we're focused on creating a platform that truly serves both galaxy operators and players. Our goal remains unchanged: enable passionate community leaders to focus on building great experiences instead of wrestling with technical complexity.</p>
-<p>Stay tuned for more updates as we progress toward our planned general availability launch in April 2026.</p>
-<hr />
-<p><em>Interested in beta access? <a href="mailto:interested@swgrealms.com">Contact us</a> to learn more about participating in the SWGRealms beta program.</em></p>
-
+            
+            <button id="loginBtn" class="auth-action-btn" type="button">Sign In</button>
         </div>
-        
-        <footer class="post-footer">
-            <a href="/updates/" class="back-link">&larr; Back to Updates</a>
-        </footer>
-    </article>
+    </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const loginBtn = document.getElementById('loginBtn');
+    
+    loginBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Full page redirect to authentication
+        const authUrl = 'https:&#x2F;&#x2F;auth.swgrealms.com/login?client_id=13ranh9vppoj3kntrfrh478kss&response_type=code&scope=email+openid+profile&redirect_uri=' + encodeURIComponent('https:&#x2F;&#x2F;play.swgrealms.com&#x2F;auth&#x2F;callback');
+        
+        console.log('Redirecting to authentication...');
+        window.location.href = authUrl;
+        
+        return false;
+    });
+});
+</script>
+
+<style>
+.auth-page {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url('/background.svg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.auth-content {
+    text-align: center;
+    z-index: 10;
+}
+
+.auth-card {
+    background: rgba(31, 31, 31, 0.9);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+}
+
+.auth-card h1 {
+    color: #d4af37;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.auth-card p {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.auth-explanation {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.auth-explanation h3 {
+    color: #d4af37;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.auth-explanation ul {
+    color: #cccccc;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.auth-explanation li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.auth-note {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 3px solid #d4af37;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    color: #cccccc;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.auth-note:last-child {
+    margin-bottom: 0;
+}
+
+.auth-note strong {
+    color: #d4af37;
+}
+
+.auth-action-btn {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: #1f1f1f;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.auth-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+    .auth-card {
+        margin: 0 20px;
+        padding: 30px 20px;
+        max-width: none;
+    }
+    
+    .auth-card h1 {
+        font-size: 2em;
+    }
+    
+    .auth-explanation {
+        padding: 15px;
+    }
+}
+</style>
 
     </div>
 

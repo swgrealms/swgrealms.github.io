@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Primary Meta Tags -->
+    <title>SWGRealms - Managed Star Wars Galaxies Hosting</title>
+	<meta name="title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta name="description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+
+	<!-- RSS Feed -->
+	<link rel="alternate" type="application/rss+xml" title="SWGRealms - Managed Star Wars Galaxies Hosting" href="https://www.swgrealms.com/atom.xml">
+	<link rel="alternate" type="application/atom+xml" title="SWGRealms - Managed Star Wars Galaxies Hosting" href="https://www.swgrealms.com/atom.xml">
+
+	<!-- Open Graph / Facebook / Discord -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https:&amp;#x2F;&amp;#x2F;www.swgrealms.com">
+	<meta property="og:title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta property="og:description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+	<meta property="og:image" content="https://www.swgrealms.com/images/og-image.jpg">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https:&amp;#x2F;&amp;#x2F;www.swgrealms.com">
+	<meta name="twitter:title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta name="twitter:description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+	<meta name="twitter:image" content="https://www.swgrealms.com/images/og-image.jpg">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo-link">
+                    <img src="/swgrealms_logo_sm.png" class="nav-logo" alt="SWGRealms Logo">
+                </a>
+                <div class="nav-items">
+                    
+                        
+                            <a href="&#x2F;" class="nav-item">Home</a>
+                        
+                            <a href="&#x2F;about&#x2F;" class="nav-item">About</a>
+                        
+                            <a href="&#x2F;updates&#x2F;" class="nav-item">Updates</a>
+                        
+                    
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="/login/" class="nav-auth-btn nav-login-btn">Login</a>
+                <a href="/register/" class="nav-auth-btn nav-register-btn">Register</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            
+                
+                    <a href="&#x2F;" class="mobile-nav-item">Home</a>
+                
+                    <a href="&#x2F;about&#x2F;" class="mobile-nav-item">About</a>
+                
+                    <a href="&#x2F;updates&#x2F;" class="mobile-nav-item">Updates</a>
+                
+            
+        </div>
+    </nav>
+
+    <div class="content">
+        
+<!-- Full-width SWGEmu notification banner -->
+<div class="swgemu-notification">
+    <div class="notification-content">
+        <h3>SWGEmu Users - Limited Time Offer</h3>
+        <p>For a limited time, SWGEmu users can claim their existing username in SWGRealms! Use your existing SWGEmu credentials to migrate your account.</p>
+        <a href="/login/" class="notification-btn">Claim Your SWGEmu Username</a>
+    </div>
+</div>
+
+<div class="auth-page">
+    <!-- Main Registration Form -->
+    <div class="auth-content">
+        <div class="auth-card">
+            <h1>Create New Account</h1>
+            <p>New to both SWGEmu and SWGRealms? Create a fresh account below.</p>
+            
+            <div class="auth-explanation">
+                <h3>What happens next:</h3>
+                <ul>
+                    <li>Click "Create Account" to go to our secure registration page</li>
+                    <li>Choose a username and enter your email address</li>
+                    <li>Create a secure password</li>
+                    <li>You'll be redirected back here once registered</li>
+                </ul>
+                
+                <div class="auth-note">
+                    <strong>Note:</strong> You may get an error if you choose a username that's already claimed by an existing SWGEmu user.
+                </div>
+            </div>
+            
+            <button id="registerBtn" class="auth-action-btn" type="button">Create New Account</button>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const registerBtn = document.getElementById('registerBtn');
+    
+    registerBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Full page redirect to registration
+        const authUrl = 'https:&#x2F;&#x2F;auth.swgrealms.com/signup?client_id=13ranh9vppoj3kntrfrh478kss&response_type=code&scope=email+openid+profile&redirect_uri=' + encodeURIComponent('https:&#x2F;&#x2F;play.swgrealms.com&#x2F;auth&#x2F;callback');
+        
+        console.log('Redirecting to registration...');
+        window.location.href = authUrl;
+        
+        return false;
+    });
+});
+</script>
+
+<style>
+/* Full-width SWGEmu notification banner - matching homepage sections */
+.swgemu-notification {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(184, 148, 31, 0.15) 100%);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto 0 auto; /* Top margin for spacing */
+    max-width: 1200px; /* Match homepage max-width */
+    width: calc(100% - 40px); /* Account for margins to avoid scrollbar */
+    position: relative;
+    z-index: 5;
+}
+
+.notification-content {
+    text-align: center;
+}
+
+.notification-content h3 {
+    color: #d4af37;
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.notification-content p {
+    color: #cccccc;
+    margin: 0 0 12px 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.notification-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: #1f1f1f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+
+.notification-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Main auth page - positioned closer to notification */
+.auth-page {
+    position: relative;
+    background: url('/background.svg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 40px 20px 20px 20px; /* Small top padding for gap */
+    display: flex;
+    align-items: flex-start; /* Align to top instead of center */
+    justify-content: center;
+}
+
+.auth-content {
+    text-align: center;
+    z-index: 10;
+}
+
+.auth-card {
+    background: rgba(31, 31, 31, 0.9);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+}
+
+.auth-card h1 {
+    color: #d4af37;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.auth-card p {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.auth-explanation {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.auth-explanation h3 {
+    color: #d4af37;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.auth-explanation ul {
+    color: #cccccc;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.auth-explanation li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.auth-note {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 3px solid #d4af37;
+    padding: 12px;
+    margin-bottom: 0;
+    border-radius: 4px;
+    color: #cccccc;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.auth-note strong {
+    color: #d4af37;
+}
+
+.auth-action-btn {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: #1f1f1f;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.auth-action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+    .swgemu-notification {
+        margin: 20px auto 0 auto; /* Normal margin on mobile too */
+        width: calc(100% - 20px); /* Smaller margins on mobile */
+    }
+    
+    .notification-content h3 {
+        font-size: 1.1em;
+    }
+    
+    .notification-content p {
+        font-size: 0.9em;
+    }
+    
+    .auth-page {
+        padding: 30px 10px 10px 10px; /* Smaller gap on mobile */
+    }
+    
+    .auth-card {
+        margin: 0;
+        padding: 30px 20px;
+        max-width: none;
+    }
+    
+    .auth-explanation {
+        padding: 15px;
+    }
+}
+</style>
+
+    </div>
+
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            
+            // Animate hamburger icon
+            const spans = mobileToggle.querySelectorAll('span');
+            if (mobileNav.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    }
+});
+</script>
+
+<!-- build date: 2025-08-08 19:11:25 -->
+</body>
+</html>

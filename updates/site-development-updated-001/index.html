@@ -27,20 +27,45 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="header">
-        <img src="/images/swgrealms_logo.png" class="logo" alt="SWGRealms Logo">
-    </div>
-
-    <nav class="navigation">
-        
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo-link">
+                    <img src="/swgrealms_logo_sm.png" class="nav-logo" alt="SWGRealms Logo">
+                </a>
+                <div class="nav-items">
+                    
+                        
+                            <a href="&#x2F;" class="nav-item">Home</a>
+                        
+                            <a href="&#x2F;about&#x2F;" class="nav-item">About</a>
+                        
+                            <a href="&#x2F;updates&#x2F;" class="nav-item">Updates</a>
+                        
+                    
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="/login/" class="nav-auth-btn nav-login-btn">Login</a>
+                <a href="/register/" class="nav-auth-btn nav-register-btn">Register</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav">
             
-                <a href="&#x2F;" class="nav-item">Home</a>
+                
+                    <a href="&#x2F;" class="mobile-nav-item">Home</a>
+                
+                    <a href="&#x2F;about&#x2F;" class="mobile-nav-item">About</a>
+                
+                    <a href="&#x2F;updates&#x2F;" class="mobile-nav-item">Updates</a>
+                
             
-                <a href="&#x2F;about&#x2F;" class="nav-item">About</a>
-            
-                <a href="&#x2F;updates&#x2F;" class="nav-item">Updates</a>
-            
-        
+        </div>
     </nav>
 
     <div class="content">
@@ -91,6 +116,32 @@
 
     </div>
 
-<!-- build date: 2025-07-28 11:10:18 -->
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            
+            // Animate hamburger icon
+            const spans = mobileToggle.querySelectorAll('span');
+            if (mobileNav.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    }
+});
+</script>
+
+<!-- build date: 2025-08-08 19:11:25 -->
 </body>
 </html>
