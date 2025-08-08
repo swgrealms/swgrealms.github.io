@@ -74,8 +74,9 @@
 <div class="swgemu-notification">
     <div class="notification-content">
         <h3>SWGEmu Users - Limited Time Offer</h3>
-        <p>For a limited time, SWGEmu users can claim their existing username in SWGRealms! Use your existing SWGEmu credentials to migrate your account.</p>
-        <a href="/login/" class="notification-btn">Claim Your SWGEmu Username</a>
+        <p>For a limited time, SWGEmu users can claim their existing username in SWGRealms!</p>
+        <p>Sign-in with your existing SWGEmu username and password to link your SWGRealms and SWGEmu accounts.</p>
+        <a href="#" id="swgemuOfferBtn" class="notification-btn">Claim Your SWGEmu Username</a>
     </div>
 </div>
 
@@ -108,7 +109,9 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const registerBtn = document.getElementById('registerBtn');
+    const swgemuOfferBtn = document.getElementById('swgemuOfferBtn');
     
+    // Handle new account registration
     registerBtn.addEventListener('click', function(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -117,6 +120,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const authUrl = 'https://auth.swgrealms.com/signup?client_id=13ranh9vppoj3kntrfrh478kss&response_type=code&scope=email+openid+profile&redirect_uri=' + encodeURIComponent('https://play.swgrealms.com/auth/callback');
         
         console.log('Redirecting to registration...');
+        window.location.href = authUrl;
+        
+        return false;
+    });
+    
+    // Handle SWGEmu offer button - go to Cognito sign-in for existing users
+    swgemuOfferBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        // Sign-in URL for existing SWGEmu users
+        const authUrl = 'https://auth.swgrealms.com/login?client_id=13ranh9vppoj3kntrfrh478kss&response_type=code&scope=email+openid+profile&redirect_uri=' + encodeURIComponent('https://play.swgrealms.com/auth/callback');
+        
+        console.log('Redirecting SWGEmu user to sign-in...');
         window.location.href = authUrl;
         
         return false;
@@ -329,6 +346,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- build date: 2025-08-08 21:05:41 -->
+<!-- build date: 2025-08-08 21:09:46 -->
 </body>
 </html>
