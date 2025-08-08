@@ -83,16 +83,6 @@
             <p>We're excited to announce that SWGRealms now has a complete, production-ready authentication system that prioritizes security while preserving your SWGEmu community history. This update represents a major milestone in our mission to provide a secure, scalable platform for Star Wars Galaxies communities.</p>
 <h2 id="security-is-job-zero">Security is Job Zero</h2>
 <p>At SWGRealms, we believe that <strong>Security is Job Zero</strong>. Too many gaming servers "roll their own security," which sounds straightforward until a breach occurs and user emails, passwords, and personal data end up on the dark web for $0.01 per user. We've taken a different approach by building on enterprise-grade infrastructure from day one.</p>
-<h2 id="amazon-cognito-enterprise-grade-authentication">Amazon Cognito: Enterprise-Grade Authentication</h2>
-<p>Our authentication system is built on <a rel="noopener nofollow noreferrer" target="_blank" href="https://aws.amazon.com/cognito/">Amazon Cognito</a>, the same service that powers authentication for millions of applications worldwide. This isn't just about convenience – it's about leveraging Amazon's decades of security expertise and continuous hardening.</p>
-<p><strong>Key Security Benefits:</strong></p>
-<ul>
-<li><strong>Separated Authentication</strong>: Your login credentials are completely isolated from game servers and galaxy systems</li>
-<li><strong>Reduced Attack Surface</strong>: SWGRealms never stores your passwords or sensitive personal information</li>
-<li><strong>Managed UI Protection</strong>: Amazon's hardened login pages prevent clickjacking, credential theft, and other common attacks</li>
-<li><strong>Enterprise Compliance</strong>: Built-in support for security standards and regulatory requirements</li>
-<li><strong>Future-Ready</strong>: Native support for multi-factor authentication, social logins, and advanced security features</li>
-</ul>
 <h2 id="preserving-your-swgemu-legacy">Preserving Your SWGEmu Legacy</h2>
 <p>While security is paramount, we haven't forgotten about community. Our authentication system seamlessly integrates with SWGEmu's systems to preserve your community history:</p>
 <ul>
@@ -102,16 +92,6 @@
 <li><strong>Seamless Migration</strong>: Existing SWGEmu users can sign in with their current credentials</li>
 </ul>
 <p>This lets you bring your SWGEmu legacy into SWGRealms without losing years of community history and contributions.</p>
-<h2 id="built-for-scale">Built for Scale</h2>
-<p>SWGRealms is designed to support thousands of galaxies and tens of thousands of concurrent players if the community so desires. Our authentication infrastructure scales automatically, ensuring consistent performance whether we're serving a handful of beta users or a thriving universe of communities.</p>
-<p><strong>By the Numbers:</strong></p>
-<ul>
-<li><strong>1,200+ lines of code</strong> across authentication components</li>
-<li><strong>8 custom user attributes</strong> for preserving SWGEmu history</li>
-<li><strong>3 integrated systems</strong>: Static site, authentication server, and play platform</li>
-<li><strong>2 deployment environments</strong> with automated testing and rollback capabilities</li>
-<li><strong>1 unified identity</strong> across all galaxies in the SWGRealms universe</li>
-</ul>
 <h2 id="what-this-means-for-you">What This Means for You</h2>
 <p><strong>For Non-Technical Users:</strong></p>
 <p>Think of our authentication system like a secure bank vault for your gaming identity. Instead of every galaxy owner having to build their own security (like keeping cash under a mattress), we use a professional, heavily-guarded system that's designed specifically for protecting user accounts.</p>
@@ -124,8 +104,32 @@
 </ol>
 <p><strong>For Galaxy Owners:</strong></p>
 <p>You can focus on creating amazing content and building your community instead of worrying about security breaches, password management, or user data protection. The authentication system handles all the complex security requirements automatically, giving you peace of mind and more time for what matters most.</p>
-<p><strong>For Technical Users:</strong></p>
+<h2 id="community-focused-security">Community-Focused Security</h2>
+<p>While we see SWGRealms as a place to build community, we also see it as a place to create that community securely and at scale. Our goal is to enable galaxy owners to focus on creative content and players to not sweat the details of how we glue it all together.</p>
+<p>Security doesn't have to come at the expense of community – it can actually strengthen it by building trust and enabling features that wouldn't be possible with traditional approaches.</p>
+<h2 id="for-the-technical-crowd">For the Technical Crowd</h2>
+<p><strong>Amazon Cognito: Enterprise-Grade Authentication</strong></p>
+<p>Our authentication system is built on <a rel="noopener nofollow noreferrer" target="_blank" href="https://aws.amazon.com/cognito/">Amazon Cognito</a>, the same service that powers authentication for millions of applications worldwide. This isn't just about convenience – it's about leveraging Amazon's decades of security expertise and continuous hardening.</p>
+<p><strong>Key Security Benefits:</strong></p>
+<ul>
+<li><strong>Separated Authentication</strong>: Your login credentials are completely isolated from game servers and galaxy systems</li>
+<li><strong>Reduced Attack Surface</strong>: SWGRealms never stores your passwords or sensitive personal information</li>
+<li><strong>Managed UI Protection</strong>: Amazon's hardened login pages prevent clickjacking, credential theft, and other common attacks</li>
+<li><strong>Enterprise Compliance</strong>: Built-in support for security standards and regulatory requirements</li>
+<li><strong>Future-Ready</strong>: Native support for multi-factor authentication, social logins, and advanced security features</li>
+</ul>
+<p><strong>Technical Implementation:</strong></p>
 <p>We've implemented a modern OAuth 2.0 flow with JWT tokens, custom attribute mapping, and automated user migration. The system uses AWS Lambda for serverless authentication processing, with comprehensive logging and monitoring. All user data is encrypted in transit and at rest, with proper key management and rotation.</p>
+<h2 id="built-for-scale">Built for Scale</h2>
+<p>SWGRealms is designed to support thousands of galaxies and tens of thousands of concurrent players if the community so desires. Our authentication infrastructure scales automatically, ensuring consistent performance whether we're serving a handful of beta users or a thriving universe of communities.</p>
+<p><strong>By the Numbers:</strong></p>
+<ul>
+<li><strong>1,200+ lines of code</strong> across authentication components</li>
+<li><strong>8 custom user attributes</strong> for preserving SWGEmu history</li>
+<li><strong>3 integrated systems</strong>: Static site, authentication server, and play platform</li>
+<li><strong>2 deployment environments</strong> with automated testing and rollback capabilities</li>
+<li><strong>1 unified identity</strong> across all galaxies in the SWGRealms universe</li>
+</ul>
 <h2 id="looking-forward">Looking Forward</h2>
 <p>This authentication foundation enables exciting future features:</p>
 <ul>
@@ -135,11 +139,8 @@
 <li><strong>Cross-Galaxy Features</strong> while maintaining privacy boundaries</li>
 <li><strong>API Access</strong> for third-party integrations</li>
 </ul>
-<h2 id="community-focused-security">Community-Focused Security</h2>
-<p>While we see SWGRealms as a place to build community, we also see it as a place to create that community securely and at scale. Our goal is to enable galaxy owners to focus on creative content and players to not sweat the details of how we glue it all together.</p>
-<p>Security doesn't have to come at the expense of community – it can actually strengthen it by building trust and enabling features that wouldn't be possible with traditional approaches.</p>
 <h2 id="ready-for-beta-testing">Ready for Beta Testing</h2>
-<p>The complete authentication system is now live at <a rel="noopener nofollow noreferrer" target="_blank" href="https://swgrealms.com">swgrealms.com</a>. SWGEmu community members can sign in with their existing credentials and explore the platform while preserving their community history.</p>
+<p>The complete authentication system is now live! SWGEmu community members can <a rel="noopener nofollow noreferrer" target="_blank" href="https://www.swgrealms.com/register/">register for SWGRealms</a> with their existing credentials and explore the platform while preserving their community history.</p>
 <p>We're excited to see what the community thinks of this foundation as we continue building toward our full platform launch.</p>
 <hr />
 <p><em>Have questions about our security approach or want to learn more about the technical implementation? Contact us at <a href="mailto:interested@swgrealms.com">interested@swgrealms.com</a>.</em></p>
@@ -180,6 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- build date: 2025-08-08 20:26:47 -->
+<!-- build date: 2025-08-08 20:58:00 -->
 </body>
 </html>
