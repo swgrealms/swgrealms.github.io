@@ -411,18 +411,41 @@ a:visited {
 }
 
 /* General link styling */
-a {
+/* External link styling */
+.external-link {
     color: #4caf50 !important;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
-a:visited {
+.external-link:hover {
+    color: #66ff66 !important;
+    text-decoration: underline !important;
+}
+
+/* Global link styling - override browser defaults including webkit */
+a, a:link, a:visited, a:active {
     color: #4caf50 !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: #4caf50 !important;
 }
 
 a:hover {
     color: #66ff66 !important;
-    text-decoration: underline;
+    text-decoration: underline !important;
+    -webkit-text-fill-color: #66ff66 !important;
+}
+
+/* Section content links */
+.section a, .section a:link, .section a:visited, .section a:active {
+    color: #4caf50 !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: #4caf50 !important;
+}
+
+.section a:hover {
+    color: #66ff66 !important;
+    text-decoration: underline !important;
+    -webkit-text-fill-color: #66ff66 !important;
 }
 
 .section {
