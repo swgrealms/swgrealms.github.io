@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Primary Meta Tags -->
+    <title>SWGRealms - Managed Star Wars Galaxies Hosting</title>
+	<meta name="title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta name="description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+
+	<!-- RSS Feed -->
+	<link rel="alternate" type="application/rss+xml" title="SWGRealms - Managed Star Wars Galaxies Hosting" href="https://www.swgrealms.com/atom.xml">
+	<link rel="alternate" type="application/atom+xml" title="SWGRealms - Managed Star Wars Galaxies Hosting" href="https://www.swgrealms.com/atom.xml">
+
+	<!-- Open Graph / Facebook / Discord -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https:&amp;#x2F;&amp;#x2F;www.swgrealms.com">
+	<meta property="og:title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta property="og:description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+	<meta property="og:image" content="https://www.swgrealms.com/images/og-image.jpg">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https:&amp;#x2F;&amp;#x2F;www.swgrealms.com">
+	<meta name="twitter:title" content="SWGRealms - Managed Star Wars Galaxies Hosting">
+	<meta name="twitter:description" content="Managed hosting platform for Star Wars Galaxies communities. Focus on building great experiences, not managing servers.">
+	<meta name="twitter:image" content="https://www.swgrealms.com/images/og-image.jpg">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="/" class="nav-logo-link">
+                    <img src="/swgrealms_logo_sm.png" class="nav-logo" alt="SWGRealms Logo">
+                </a>
+                <div class="nav-items">
+                    
+                        
+                            <a href="&#x2F;" class="nav-item">Home</a>
+                        
+                            <a href="&#x2F;about&#x2F;" class="nav-item">About</a>
+                        
+                            <a href="&#x2F;updates&#x2F;" class="nav-item">Updates</a>
+                        
+                    
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="/login/" class="nav-auth-btn nav-login-btn">Login</a>
+                <a href="/register/" class="nav-auth-btn nav-register-btn">Register</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            
+                
+                    <a href="&#x2F;" class="mobile-nav-item">Home</a>
+                
+                    <a href="&#x2F;about&#x2F;" class="mobile-nav-item">About</a>
+                
+                    <a href="&#x2F;updates&#x2F;" class="mobile-nav-item">Updates</a>
+                
+            
+        </div>
+    </nav>
+
+    <div class="content">
+        
+<div class="section">
+    <article class="post">
+        <header class="post-header">
+            <h1>Developer Update 002 - Secure, Scalable Registration</h1>
+            <div class="post-meta">
+                <time datetime="2025-08-08">August 08, 2025</time>
+            </div>
+        </header>
+        
+        <div class="post-content">
+            <p>We're excited to announce that SWGRealms now has a complete, production-ready authentication system that prioritizes security while preserving your SWGEmu community history. This update represents a major milestone in our mission to provide a secure, scalable platform for Star Wars Galaxies communities.</p>
+<h2 id="security-is-job-zero">Security is Job Zero</h2>
+<p>At SWGRealms, we believe that <strong>Security is Job Zero</strong>. Too many gaming servers "roll their own security," which sounds straightforward until a breach occurs and user emails, passwords, and personal data end up on the dark web for $0.01 per user. We've taken a different approach by building on enterprise-grade infrastructure from day one.</p>
+<h2 id="amazon-cognito-enterprise-grade-authentication">Amazon Cognito: Enterprise-Grade Authentication</h2>
+<p>Our authentication system is built on <a rel="noopener nofollow noreferrer" target="_blank" href="https://aws.amazon.com/cognito/">Amazon Cognito</a>, the same service that powers authentication for millions of applications worldwide. This isn't just about convenience – it's about leveraging Amazon's decades of security expertise and continuous hardening.</p>
+<p><strong>Key Security Benefits:</strong></p>
+<ul>
+<li><strong>Separated Authentication</strong>: Your login credentials are completely isolated from game servers and galaxy systems</li>
+<li><strong>Reduced Attack Surface</strong>: SWGRealms never stores your passwords or sensitive personal information</li>
+<li><strong>Managed UI Protection</strong>: Amazon's hardened login pages prevent clickjacking, credential theft, and other common attacks</li>
+<li><strong>Enterprise Compliance</strong>: Built-in support for security standards and regulatory requirements</li>
+<li><strong>Future-Ready</strong>: Native support for multi-factor authentication, social logins, and advanced security features</li>
+</ul>
+<h2 id="preserving-your-swgemu-legacy">Preserving Your SWGEmu Legacy</h2>
+<p>While security is paramount, we haven't forgotten about community. Our authentication system seamlessly integrates with SWGEmu's existing user database to preserve your community history:</p>
+<ul>
+<li><strong>Veteran Status</strong>: Your original join date from 2011+ is preserved</li>
+<li><strong>Forum Activity</strong>: Post counts and activity timestamps are maintained</li>
+<li><strong>Community Identity</strong>: Your legacy username and verification status carry forward</li>
+<li><strong>Seamless Migration</strong>: Existing SWGEmu users can sign in with their current credentials</li>
+</ul>
+<p>This solves the "one way door" problem – you can join SWGRealms without losing years of community history and contributions.</p>
+<h2 id="built-for-scale">Built for Scale</h2>
+<p>SWGRealms is designed to support hundreds of galaxies and thousands of concurrent players. Our authentication infrastructure scales automatically, ensuring consistent performance whether we're serving a handful of beta users or a thriving universe of communities.</p>
+<p><strong>By the Numbers:</strong></p>
+<ul>
+<li><strong>1,200+ lines of code</strong> across authentication components</li>
+<li><strong>8 custom user attributes</strong> for preserving SWGEmu history</li>
+<li><strong>3 integrated systems</strong>: Static site, authentication server, and play platform</li>
+<li><strong>2 deployment environments</strong> with automated testing and rollback capabilities</li>
+<li><strong>1 unified identity</strong> across all galaxies in the SWGRealms universe</li>
+</ul>
+<h2 id="what-this-means-for-you">What This Means for You</h2>
+<p><strong>For Non-Technical Users:</strong></p>
+<p>Think of our authentication system like a secure bank vault for your gaming identity. Instead of every galaxy owner having to build their own security (like keeping cash under a mattress), we use a professional, heavily-guarded system that's designed specifically for protecting user accounts.</p>
+<p>When you sign in to SWGRealms:</p>
+<ol>
+<li>Your password never leaves Amazon's secure servers</li>
+<li>Galaxy owners only see the information they need to run their communities</li>
+<li>Your personal data is protected by the same systems that secure major corporations</li>
+<li>You get one account that works across all galaxies, but each galaxy can't see your activity on others</li>
+</ol>
+<p><strong>For Galaxy Owners:</strong></p>
+<p>You can focus on creating amazing content and building your community instead of worrying about security breaches, password management, or user data protection. The authentication system handles all the complex security requirements automatically, giving you peace of mind and more time for what matters most.</p>
+<p><strong>For Technical Users:</strong></p>
+<p>We've implemented a modern OAuth 2.0 flow with JWT tokens, custom attribute mapping, and automated user migration. The system uses AWS Lambda for serverless authentication processing, with comprehensive logging and monitoring. All user data is encrypted in transit and at rest, with proper key management and rotation.</p>
+<h2 id="looking-forward">Looking Forward</h2>
+<p>This authentication foundation enables exciting future features:</p>
+<ul>
+<li><strong>Multi-Factor Authentication</strong> for enhanced security</li>
+<li><strong>Social Login Integration</strong> (Discord, GitHub, etc.)</li>
+<li><strong>Advanced Permission Systems</strong> for galaxy management</li>
+<li><strong>Cross-Galaxy Features</strong> while maintaining privacy boundaries</li>
+<li><strong>API Access</strong> for third-party integrations</li>
+</ul>
+<h2 id="community-focused-security">Community-Focused Security</h2>
+<p>While we see SWGRealms as a place to build community, we also see it as a place to create that community securely and at scale. Our goal is to enable galaxy owners to focus on creative content and players to not sweat the details of how we glue it all together.</p>
+<p>Security doesn't have to come at the expense of community – it can actually strengthen it by building trust and enabling features that wouldn't be possible with traditional approaches.</p>
+<h2 id="ready-for-beta-testing">Ready for Beta Testing</h2>
+<p>The complete authentication system is now live at <a rel="noopener nofollow noreferrer" target="_blank" href="https://swgrealms.com">swgrealms.com</a>. SWGEmu community members can sign in with their existing credentials and explore the platform while preserving their community history.</p>
+<p>We're excited to see what the community thinks of this foundation as we continue building toward our full platform launch.</p>
+<hr />
+<p><em>Have questions about our security approach or want to learn more about the technical implementation? Join the discussion on our community forums or reach out to the development team.</em></p>
+
+        </div>
+        
+        <footer class="post-footer">
+            <a href="/updates/" class="back-link">&larr; Back to Updates</a>
+        </footer>
+    </article>
+</div>
+
+    </div>
+
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            
+            // Animate hamburger icon
+            const spans = mobileToggle.querySelectorAll('span');
+            if (mobileNav.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    }
+});
+</script>
+
+<!-- build date: 2025-08-08 19:29:29 -->
+</body>
+</html>
