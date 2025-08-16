@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
         
         // Full page redirect to registration
-        const authUrl = 'https://auth.swgrealms.com/signup?client_id=13ranh9vppoj3kntrfrh478kss&response_type=code&scope=email+openid+profile&redirect_uri=' + encodeURIComponent('https://play.swgrealms.com/auth/callback');
+        const authUrl = 'https://api.swgrealms.com/auth/signup';
         
         console.log('Redirecting to registration...');
         window.location.href = authUrl;
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
         
         // Sign-in URL for existing SWGEmu users
-        const authUrl = 'https://auth.swgrealms.com/login?client_id=13ranh9vppoj3kntrfrh478kss&response_type=code&scope=email+openid+profile&redirect_uri=' + encodeURIComponent('https://play.swgrealms.com/auth/callback');
+        const authUrl = 'https://api.swgrealms.com/auth/login';
         
         console.log('Redirecting SWGEmu user to sign-in...');
         window.location.href = authUrl;
@@ -346,6 +346,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- build date: 2025-08-09 09:14:18 -->
+<!-- build date: 2025-08-16 15:56:11 -->
 </body>
 </html>
